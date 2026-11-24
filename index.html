@@ -1963,6 +1963,206 @@
       color: var(--maroon);
       animation: beat 1.1s ease-in-out infinite
     }
+  
+    /* =======================================================
+       ROYAL WEDDING CARD PALETTE & SACRED RELIGIOUS MOTIFS
+       ======================================================= */
+    :root {
+      --card-gold: #D4AF70;
+      --card-deep-gold: #B58836;
+      --card-bright-gold: #F5D061;
+      --card-kumkum: #78182A;
+      --card-haldi: #E29B12;
+      --card-cream: #FFFDF9;
+      --card-border-gold: rgba(212, 175, 112, 0.65);
+    }
+
+    /* Textured tactile wedding card stock */
+    body {
+      background-color: #FAF4E6;
+      background-image:
+        radial-gradient(ellipse at 50% 0%, rgba(212, 175, 112, 0.12) 0%, transparent 60%),
+        radial-gradient(ellipse at 50% 100%, rgba(120, 24, 42, 0.08) 0%, transparent 60%),
+        repeating-linear-gradient(45deg, rgba(212, 175, 112, 0.025) 0px, rgba(212, 175, 112, 0.025) 1px, transparent 1px, transparent 12px),
+        repeating-linear-gradient(-45deg, rgba(212, 175, 112, 0.025) 0px, rgba(212, 175, 112, 0.025) 1px, transparent 1px, transparent 12px);
+    }
+
+    /* Royal wedding card leaf container */
+    .wedding-card-sheet {
+      position: relative;
+      background: linear-gradient(145deg, rgba(255, 253, 249, 0.98), rgba(250, 243, 228, 0.96));
+      border: 2px solid var(--card-border-gold);
+      box-shadow: 
+        0 0 0 5px rgba(255, 253, 249, 0.9),
+        0 0 0 7px var(--card-border-gold),
+        0 18px 45px rgba(96, 28, 44, 0.14),
+        inset 0 0 35px rgba(212, 175, 112, 0.12);
+      border-radius: 14px;
+      padding: clamp(28px, 5vw, 60px) clamp(18px, 4vw, 48px);
+      margin: auto;
+      color: #3a1a22;
+    }
+
+    /* Traditional Corner Flourish / Filigree in SVG */
+    .corner-flourish {
+      position: absolute;
+      width: 44px;
+      height: 44px;
+      pointer-events: none;
+      z-index: 3;
+      color: var(--card-gold);
+    }
+    .corner-flourish.tl { top: 10px; left: 10px; }
+    .corner-flourish.tr { top: 10px; right: 10px; transform: scaleX(-1); }
+    .corner-flourish.bl { bottom: 10px; left: 10px; transform: scaleY(-1); }
+    .corner-flourish.br { bottom: 10px; right: 10px; transform: scale(-1); }
+
+    /* Sacred Invocations & Devanagari Shlokas */
+    .divine-invocation {
+      text-align: center;
+      margin-bottom: 22px;
+      position: relative;
+    }
+    .ganesha-crest {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+    .ganesha-crest svg {
+      width: 58px;
+      height: 58px;
+      filter: drop-shadow(0 2px 6px rgba(212, 175, 112, 0.45));
+    }
+    .shloka-main {
+      font-family: 'Noto Serif Devanagari', 'Rozha One', serif;
+      font-weight: 700;
+      font-size: clamp(1.05rem, 3.2vw, 1.45rem);
+      letter-spacing: 0.04em;
+      color: #8C2237;
+      text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
+      margin-top: 4px;
+      line-height: 1.35;
+    }
+    .shloka-sub {
+      font-family: 'Noto Serif Devanagari', serif;
+      font-weight: 600;
+      font-size: clamp(0.8rem, 2.2vw, 0.98rem);
+      color: #9E6A1B;
+      letter-spacing: 0.05em;
+      margin-top: 4px;
+      line-height: 1.5;
+    }
+    .shloka-vivah {
+      font-family: 'Noto Serif Devanagari', serif;
+      font-weight: 600;
+      font-size: clamp(0.78rem, 2.2vw, 0.95rem);
+      color: #8C2237;
+      margin-top: 8px;
+      letter-spacing: 0.06em;
+    }
+
+    /* Sacred Toran / Floral Garland divider */
+    .sacred-toran {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin: 12px auto 16px;
+      max-width: 420px;
+      color: var(--card-gold);
+    }
+    .sacred-toran-line {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--card-gold), transparent);
+    }
+    .sacred-toran-symbol {
+      font-size: 1.15rem;
+      line-height: 1;
+      color: #8C2237;
+      filter: drop-shadow(0 1px 3px rgba(212, 175, 112, 0.6));
+    }
+
+    /* Event Card Royal Leaf Styling */
+    .ev .wrap {
+      position: relative;
+      background: linear-gradient(150deg, rgba(255, 253, 249, 0.96), rgba(252, 246, 235, 0.93));
+      border: 1px solid rgba(212, 175, 112, 0.55);
+      box-shadow: 
+        0 0 0 4px rgba(255, 255, 255, 0.8),
+        0 0 0 5px rgba(212, 175, 112, 0.45),
+        0 14px 38px rgba(0, 0, 0, 0.12);
+      border-radius: 16px;
+      padding: clamp(26px, 4.5vw, 48px);
+    }
+    .event-sanskrit-tag {
+      font-family: 'Noto Serif Devanagari', 'Rozha One', serif;
+      font-weight: 700;
+      font-size: clamp(0.95rem, 2.5vw, 1.25rem);
+      color: #8C2237;
+      letter-spacing: 0.05em;
+      margin-bottom: 2px;
+    }
+
+    /* Preloader Door Religious Medallions */
+    .door-medallion {
+      position: absolute;
+      top: 50%;
+      width: 66px;
+      height: 66px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 30%, #F5D061, #B58836 75%, #754B18);
+      box-shadow: 0 0 20px rgba(244, 201, 75, 0.6), inset 0 2px 4px rgba(255, 255, 255, 0.5);
+      display: grid;
+      place-items: center;
+      font-family: 'Noto Serif Devanagari', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #601C2C;
+      text-shadow: 0 1px 2px rgba(255, 255, 255, 0.6);
+      transform: translateY(-50%);
+      z-index: 3;
+      border: 2px solid #FFF8DC;
+    }
+    .door.l .door-medallion {
+      right: 20px;
+    }
+    .door.r .door-medallion {
+      left: 20px;
+    }
+    .gate-divine-title {
+      font-family: 'Noto Serif Devanagari', 'Rozha One', serif;
+      font-weight: 700;
+      font-size: clamp(1.15rem, 3.5vw, 1.6rem);
+      color: #F4C94B;
+      text-shadow: 0 0 15px rgba(244, 201, 75, 0.7);
+      margin-bottom: 6px;
+      letter-spacing: 0.06em;
+    }
+
+    /* Seven Vows Sacred Hawan Kund Heading */
+    .pheras-divine-header {
+      margin-bottom: 8px;
+    }
+    .pheras-divine-header svg {
+      width: 44px;
+      height: 44px;
+      margin-bottom: 4px;
+      filter: drop-shadow(0 0 10px rgba(244, 201, 75, 0.75));
+    }
+
+    /* Footer Sacred Blessing */
+    .footer-shloka-block {
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(212, 175, 112, 0.35);
+      font-family: 'Noto Serif Devanagari', serif;
+      font-size: clamp(0.85rem, 2.4vw, 1.05rem);
+      line-height: 1.8;
+      color: #FFE6BC;
+    }
+
   </style>
 </head>
 
@@ -2006,9 +2206,10 @@
       </div>
     </div>
 
-    <div class="door l" aria-hidden="true"></div>
-    <div class="door r" aria-hidden="true"></div>
+    <div class="door l" aria-hidden="true"><div class="door-medallion">卐</div></div>
+    <div class="door r" aria-hidden="true"><div class="door-medallion">ॐ</div></div>
     <div class="gc">
+      <div class="gate-divine-title">॥ श्री गणेशाय नमः ॥</div>
       <p class="cin intro-sub" style="font-size:clamp(.72rem,2.2vw,.82rem);letter-spacing:.32em">TOGETHER WITH THEIR
         FAMILIES</p>
       <h1 class="intro-names">Bhargav <span class="intro-amp">&amp;</span> Priyu</h1>
@@ -2066,13 +2267,43 @@
   <main>
     <section id="home">
       <div class="fxl" data-fx="gold"></div>
-      <div class="wrap">
-        <p class="cin" style="letter-spacing:.3em;font-size:.78rem;color:var(--agold)" id="hLoc"></p>
+      <div class="wrap wedding-card-sheet">
+
+        <svg class="corner-flourish tl" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 40 L4 14 C4 8.5 8.5 4 14 4 L40 4 M4 4 L14 14 M8 4 L4 8 M4 24 C10 24 14 20 14 14 C14 8 10 4 4 4 M24 4 C24 10 20 14 14 14"/><circle cx="14" cy="14" r="2.5" fill="currentColor"/></svg>
+        <svg class="corner-flourish tr" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 40 L4 14 C4 8.5 8.5 4 14 4 L40 4 M4 4 L14 14 M8 4 L4 8 M4 24 C10 24 14 20 14 14 C14 8 10 4 4 4 M24 4 C24 10 20 14 14 14"/><circle cx="14" cy="14" r="2.5" fill="currentColor"/></svg>
+        <svg class="corner-flourish bl" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 40 L4 14 C4 8.5 8.5 4 14 4 L40 4 M4 4 L14 14 M8 4 L4 8 M4 24 C10 24 14 20 14 14 C14 8 10 4 4 4 M24 4 C24 10 20 14 14 14"/><circle cx="14" cy="14" r="2.5" fill="currentColor"/></svg>
+        <svg class="corner-flourish br" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 40 L4 14 C4 8.5 8.5 4 14 4 L40 4 M4 4 L14 14 M8 4 L4 8 M4 24 C10 24 14 20 14 14 C14 8 10 4 4 4 M24 4 C24 10 20 14 14 14"/><circle cx="14" cy="14" r="2.5" fill="currentColor"/></svg>
+        <div class="divine-invocation">
+          <div class="ganesha-crest">
+            <svg viewBox="0 0 80 80" fill="none" stroke="#B58836" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <path d="M40 10 Q40 18 40 26" stroke="#8C2237" stroke-width="3"/>
+  <circle cx="40" cy="12" r="3.5" fill="#8C2237" stroke="none"/>
+  <path d="M30 18 Q40 24 50 18" stroke="#8C2237"/>
+  <path d="M32 20 Q40 28 48 20" stroke="#8C2237"/>
+  <path d="M26 28 C20 30 14 36 14 44 C14 52 22 56 30 54"/>
+  <path d="M54 28 C60 30 66 36 66 44 C66 52 58 56 50 54"/>
+  <path d="M30 28 C30 28 35 24 40 24 C45 24 50 28 50 28 C50 36 48 46 48 54 C48 64 42 68 36 68 C32 68 28 64 30 60 C32 56 38 56 40 58"/>
+  <circle cx="40" cy="36" r="2.2" fill="#8C2237" stroke="none"/>
+  <path d="M48 44 Q52 44 54 41" stroke-width="2"/>
+  <path d="M32 44 Q28 44 26 43" stroke-width="2"/>
+  <ellipse cx="40" cy="72" rx="14" ry="3" stroke="#D4AF70" stroke-width="1.2" fill="none"/>
+</svg>
+            <div class="shloka-main">॥ श्री गणेशाय नमः ॥</div>
+            <div class="shloka-sub">वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ ।<br>निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा ॥</div>
+            <div class="sacred-toran" aria-hidden="true">
+              <span class="sacred-toran-line"></span>
+              <span class="sacred-toran-symbol">卐 &nbsp; ॐ &nbsp; 卐</span>
+              <span class="sacred-toran-line"></span>
+            </div>
+          </div>
+        </div>
+        <p class="cin" style="letter-spacing:.3em;font-size:.78rem;color:#8C2237;font-weight:600" id="hLoc"></p>
         <h1 class="names"><span id="gn"></span><span class="amp">&amp;</span><span id="bn"></span></h1>
-        <p class="tag" id="tagline"></p>
+        <p class="shloka-vivah">॥ ॐ श्री वरप्रदाय नमः · ॐ श्री वधूप्रदाय नमः ॥</p>
+        <p class="tag" id="tagline" style="color:#5c2432;font-weight:400"></p>
         <div class="count" id="count" aria-live="off"></div>
-        <p class="tag" style="font-size:1.1rem" id="invite"></p>
-        <a class="btn" href="#celebrations" style="--acc:var(--maroon)">VIEW CELEBRATIONS</a>
+        <p class="tag" style="font-size:1.05rem;color:#4a1226;max-width:34em;margin:16px auto" id="invite"></p>
+        <a class="btn" href="#celebrations" style="--acc:#8C2237;background:#8C2237;color:#FFF9EF;font-weight:600;border-color:#8C2237">VIEW CELEBRATIONS</a>
       </div>
     </section>
 
@@ -2080,7 +2311,8 @@
     <section id="glance" aria-label="When Eyes Met">
       <div class="wrap">
         <div class="eyes-banner">
-          <div class="eyes-ornament cin">― ✦ ॥ दृष्टिसंगम ॥ ✦ ―</div>
+          <div class="shloka-sub" style="margin-bottom:8px;font-size:clamp(0.85rem,2.4vw,1.05rem);color:var(--gold)">॥ ॐ श्री वरप्रदाय नमः · ॐ श्री वधूप्रदाय नमः ॥</div>
+          <div class="eyes-ornament cin">― ✦ ॥ दृष्टिसंगम · प्रीतिबंधन ॥ ✦ ―</div>
           <div class="eyes-frame">
             <img src="Eyes.jpg" alt="When Eyes Met - Bhargav &amp; Priyu" class="eyes-img" loading="lazy">
             <div class="eyes-feather-overlay" aria-hidden="true"></div>
@@ -2092,8 +2324,15 @@
     </section>
 
     <section id="story">
-      <div class="wrap grid">
+      <div class="wrap grid wedding-card-sheet">
+
+        <svg class="corner-flourish tl" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 40 L4 14 C4 8.5 8.5 4 14 4 L40 4 M4 4 L14 14 M8 4 L4 8 M4 24 C10 24 14 20 14 14 C14 8 10 4 4 4 M24 4 C24 10 20 14 14 14"/><circle cx="14" cy="14" r="2.5" fill="currentColor"/></svg>
+        <svg class="corner-flourish tr" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 40 L4 14 C4 8.5 8.5 4 14 4 L40 4 M4 4 L14 14 M8 4 L4 8 M4 24 C10 24 14 20 14 14 C14 8 10 4 4 4 M24 4 C24 10 20 14 14 14"/><circle cx="14" cy="14" r="2.5" fill="currentColor"/></svg>
+        <svg class="corner-flourish bl" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 40 L4 14 C4 8.5 8.5 4 14 4 L40 4 M4 4 L14 14 M8 4 L4 8 M4 24 C10 24 14 20 14 14 C14 8 10 4 4 4 M24 4 C24 10 20 14 14 14"/><circle cx="14" cy="14" r="2.5" fill="currentColor"/></svg>
+        <svg class="corner-flourish br" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 40 L4 14 C4 8.5 8.5 4 14 4 L40 4 M4 4 L14 14 M8 4 L4 8 M4 24 C10 24 14 20 14 14 C14 8 10 4 4 4 M24 4 C24 10 20 14 14 14"/><circle cx="14" cy="14" r="2.5" fill="currentColor"/></svg>
         <div>
+          <div class="event-sanskrit-tag" style="margin-bottom:4px">॥ अखण्ड सौभाग्यवती भव · वर-वधू परिचय ॥</div>
+          <div class="shloka-sub" style="font-size:0.86rem;margin-bottom:14px;color:#8C2237">माङ्गल्यं तन्तुनानेन मम जीवनहेतुना । कण्ठे बध्नामि सुभगे सा जीव शरदः शतम् ॥</div>
           <h2>Meet the couple</h2>
           <div class="person">
             <span class="role cin">THE GROOM · EVENT PLANNER</span>
@@ -2123,7 +2362,16 @@
     <div id="celebrations"></div>
 
     <section id="rsvp">
-      <div class="wrap">
+      <div class="wrap wedding-card-sheet">
+
+        <svg class="corner-flourish tl" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 40 L4 14 C4 8.5 8.5 4 14 4 L40 4 M4 4 L14 14 M8 4 L4 8 M4 24 C10 24 14 20 14 14 C14 8 10 4 4 4 M24 4 C24 10 20 14 14 14"/><circle cx="14" cy="14" r="2.5" fill="currentColor"/></svg>
+        <svg class="corner-flourish tr" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 40 L4 14 C4 8.5 8.5 4 14 4 L40 4 M4 4 L14 14 M8 4 L4 8 M4 24 C10 24 14 20 14 14 C14 8 10 4 4 4 M24 4 C24 10 20 14 14 14"/><circle cx="14" cy="14" r="2.5" fill="currentColor"/></svg>
+        <svg class="corner-flourish bl" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 40 L4 14 C4 8.5 8.5 4 14 4 L40 4 M4 4 L14 14 M8 4 L4 8 M4 24 C10 24 14 20 14 14 C14 8 10 4 4 4 M24 4 C24 10 20 14 14 14"/><circle cx="14" cy="14" r="2.5" fill="currentColor"/></svg>
+        <svg class="corner-flourish br" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 40 L4 14 C4 8.5 8.5 4 14 4 L40 4 M4 4 L14 14 M8 4 L4 8 M4 24 C10 24 14 20 14 14 C14 8 10 4 4 4 M24 4 C24 10 20 14 14 14"/><circle cx="14" cy="14" r="2.5" fill="currentColor"/></svg>
+        <div class="divine-invocation" style="margin-bottom:14px">
+          <div class="shloka-main" style="color:#8C2237;font-size:clamp(1.15rem,3.2vw,1.5rem)">॥ अतिथि देवो भव · सादर आमन्त्रणम् ॥</div>
+          <div class="shloka-sub" style="color:#B58836;font-size:0.92rem">आपकी गरिमामयी उपस्थिति हमारे इस पावन प्रसंग को अविस्मरणीय बनाएगी।</div>
+        </div>
         <h2>Venues &amp; RSVP</h2>
         <div class="vgrid" id="venues"></div>
         <!-- <form id="form" aria-label="RSVP form">
@@ -2154,6 +2402,10 @@
         <b>Priyu</b> (Makeup Artist)</p>
       <h2>Thank you for being part of our forever.</h2>
       <p class="script">Bhargav &amp; Priyu</p>
+      <div class="footer-shloka-block">
+        <p>॥ ॐ सर्वे भवन्तु सुखिनः सर्वे सन्तु निरामयाः ।<br>सर्वे भद्राणि पश्यन्तु मा कश्चिद्दुःखभाग्भवेत् ॥</p>
+        <p style="letter-spacing:0.18em;margin-top:6px;font-weight:600">॥ ॐ शान्तिः शान्तिः शान्तिः ॥</p>
+      </div>
     </div>
   </footer>
   <button id="top" aria-label="Back to top">↑</button>
@@ -2170,13 +2422,13 @@
       weddingISO: '2026-12-14T19:15:00+05:30',
       whatsapp: '910000000000',
       events: [
-        { id: 'gs', t: 'Grah Shanti &amp; Ganesh Sthapana', d: '2026-12-10', tm: '08:00', tl: '8:00 AM', v: 'Mehta Niwas, Alkapuri', m: 'Alkapuri, Vadodara', c: 'With divine blessings, we begin our celebrations by seeking peace, prosperity and happiness for the new journey ahead.', b1: '#FFF9EF', b2: '#F6E0B8', ink: '#4a2c0a', acc: '#C8741A', fx: ['#E08A1E', '#D4AF70'], type: 'diya' },
-        { id: 'ha', t: 'Haldi Ceremony', d: '2026-12-11', tm: '11:00', tl: '11:00 AM', v: 'Sunrise Lawns, Akota', m: 'Akota, Vadodara', c: 'A little sunshine, a little laughter, and a whole lot of love. Join us as we paint the beginning of forever in shades of yellow.', b1: '#FFF3C4', b2: '#F4C94B', ink: '#4d3100', acc: '#B85A0B', fx: ['#E8892B', '#F4A81D', '#FFD54A'], type: 'petal' },
-        { id: 'me', t: 'Mehendi Celebration', d: '2026-12-11', tm: '16:00', tl: '4:00 PM', v: 'Peacock Courtyard, Gotri', m: 'Gotri, Vadodara', c: 'Intricate designs, joyful hearts and beautiful traditions. Let’s celebrate the colors of love together.', b1: '#174D3B', b2: '#0d3226', ink: '#FFF9EF', acc: '#E9B7BC', fx: ['#E9B7BC', '#D4AF70'], type: 'henna' },
-        { id: 'sa', t: 'Sangeet &amp; Musical Night', d: '2026-12-12', tm: '19:30', tl: '7:30 PM', v: 'Royal Banquet Hall, Race Course', m: 'Race Course, Vadodara', c: 'An evening filled with music, laughter, dance and unforgettable memories. Let the celebrations begin!', b1: '#3a1f55', b2: '#21152F', ink: '#FFF9EF', acc: '#E9B7BC', fx: ['#D4AF70', '#E9B7BC'], type: 'stage' },
-        { id: 'dj', t: 'DJ Night', d: '2026-12-13', tm: '21:30', tl: '9:30 PM', v: 'Skyline Terrace, Sayajigunj', m: 'Sayajigunj, Vadodara', c: 'Because every great love story deserves an unforgettable celebration. Get ready to dance the night away!', b1: '#0a0612', b2: '#241044', ink: '#F3ECFF', acc: '#A77BFF', fx: ['#A77BFF', '#D4AF70'], type: 'dj' },
-        { id: 'wd', t: 'Shubh Vivah', d: '2026-12-14', tm: '19:15', tl: 'Muhurat 7:15 PM', v: 'Laxmi Vilas Gardens, Vadodara', m: 'Laxmi Vilas Palace Road, Vadodara', c: 'Two Hearts, One Sacred Promise.', b1: '#601C2C', b2: '#36091a', ink: '#FFF9EF', acc: '#D4AF70', fx: ['#E9B7BC', '#D4AF70', '#c4344d'], type: 'wed' },
-        { id: 're', t: 'Grand Reception', d: '2026-12-15', tm: '19:30', tl: '7:30 PM', v: 'Crystal Ballroom, Alkapuri', m: 'Alkapuri, Vadodara', c: 'Your presence will make our celebration even more beautiful. Join us as we begin this wonderful new chapter surrounded by love and blessings.', b1: '#FFFDF8', b2: '#EFE2C8', ink: '#1b1b1b', acc: '#9a7330', fx: ['#ffffff', '#D4AF70'], type: 'petal' }
+        { id: 'gs', t: 'Grah Shanti &amp; Ganesh Sthapana', skt: '॥ श्री गणेश पूजनम् · शान्ति पाठः ॥', d: '2026-12-10', tm: '08:00', tl: '8:00 AM', v: 'Mehta Niwas, Alkapuri', m: 'Alkapuri, Vadodara', c: 'With divine blessings, we begin our celebrations by seeking peace, prosperity and happiness for the new journey ahead.', b1: '#FFF9EF', b2: '#F6E0B8', ink: '#4a2c0a', acc: '#C8741A', fx: ['#E08A1E', '#D4AF70'], type: 'diya' },
+        { id: 'ha', t: 'Haldi Ceremony', skt: '॥ हरिद्रा लेपनम् · मङ्गल स्नानम् ॥', d: '2026-12-11', tm: '11:00', tl: '11:00 AM', v: 'Sunrise Lawns, Akota', m: 'Akota, Vadodara', c: 'A little sunshine, a little laughter, and a whole lot of love. Join us as we paint the beginning of forever in shades of yellow.', b1: '#FFF3C4', b2: '#F4C94B', ink: '#4d3100', acc: '#B85A0B', fx: ['#E8892B', '#F4A81D', '#FFD54A'], type: 'petal' },
+        { id: 'me', t: 'Mehendi Celebration', skt: '॥ मेहन्दी संस्कारः · सौभाग्य रागः ॥', d: '2026-12-11', tm: '16:00', tl: '4:00 PM', v: 'Peacock Courtyard, Gotri', m: 'Gotri, Vadodara', c: 'Intricate designs, joyful hearts and beautiful traditions. Let’s celebrate the colors of love together.', b1: '#174D3B', b2: '#0d3226', ink: '#FFF9EF', acc: '#E9B7BC', fx: ['#E9B7BC', '#D4AF70'], type: 'henna' },
+        { id: 'sa', t: 'Sangeet &amp; Musical Night', skt: '॥ संगीत संध्या · उत्सव उल्लासः ॥', d: '2026-12-12', tm: '19:30', tl: '7:30 PM', v: 'Royal Banquet Hall, Race Course', m: 'Race Course, Vadodara', c: 'An evening filled with music, laughter, dance and unforgettable memories. Let the celebrations begin!', b1: '#3a1f55', b2: '#21152F', ink: '#FFF9EF', acc: '#E9B7BC', fx: ['#D4AF70', '#E9B7BC'], type: 'stage' },
+        { id: 'dj', t: 'DJ Night', skt: '॥ युवा उत्सवः · नृत्य महोत्सवः ॥', d: '2026-12-13', tm: '21:30', tl: '9:30 PM', v: 'Skyline Terrace, Sayajigunj', m: 'Sayajigunj, Vadodara', c: 'Because every great love story deserves an unforgettable celebration. Get ready to dance the night away!', b1: '#0a0612', b2: '#241044', ink: '#F3ECFF', acc: '#A77BFF', fx: ['#A77BFF', '#D4AF70'], type: 'dj' },
+        { id: 'wd', t: 'Shubh Vivah', skt: '॥ पाणिग्रहण संस्कारः · शुभ विवाहः ॥', d: '2026-12-14', tm: '19:15', tl: 'Muhurat 7:15 PM', v: 'Laxmi Vilas Gardens, Vadodara', m: 'Laxmi Vilas Palace Road, Vadodara', c: 'Two Hearts, One Sacred Promise.', b1: '#601C2C', b2: '#36091a', ink: '#FFF9EF', acc: '#D4AF70', fx: ['#E9B7BC', '#D4AF70', '#c4344d'], type: 'wed' },
+        { id: 're', t: 'Grand Reception', skt: '॥ प्रीतिभोजः · आशीर्वाद समारोहः ॥', d: '2026-12-15', tm: '19:30', tl: '7:30 PM', v: 'Crystal Ballroom, Alkapuri', m: 'Alkapuri, Vadodara', c: 'Your presence will make our celebration even more beautiful. Join us as we begin this wonderful new chapter surrounded by love and blessings.', b1: '#FFFDF8', b2: '#EFE2C8', ink: '#1b1b1b', acc: '#9a7330', fx: ['#ffffff', '#D4AF70'], type: 'petal' }
       ],
       pheras: [
         ['१', 'अटूट साथ', 'दो प्रेमी हर परिस्थिति में सदा एक दूसरे का साथ निभाएंगे।'],
@@ -2224,7 +2476,7 @@
       const s = document.createElement('section'); s.id = 'pheras';
       s.style.cssText = 'background:linear-gradient(#36091a,#1c0610);color:var(--ivory);padding:80px 0 70px;position:sticky;top:0;z-index:7;';
       const d = '<svg viewBox="0 0 100 100" aria-hidden="true"><g class="fl"><path d="M50 12c10 14 11 24 0 33-11-9-10-19 0-33z" fill="#F4C94B"/></g><path d="M18 58h64c0 18-14 28-32 28S18 76 18 58z" fill="#D4AF70"/></svg>';
-      s.innerHTML = '<div style="text-align:center;padding:0 7vw 26px"><h2 style="font-size:clamp(2.2rem,7vw,3.8rem);color:var(--gold)">सात वचन · सात दीप</h2><p style="font:italic 1.25rem Cormorant Garamond,serif;margin:6px 0 2px;color:var(--rose)">Promises I Want From Her</p><p style="font:300 .85rem Poppins,sans-serif;letter-spacing:.05em;opacity:.85;margin-bottom:8px">Swipe through the pheras and touch each diya to seal our sacred promises.</p><p class="cin" id="lit" aria-live="polite" style="color:var(--gold);font-size:.78rem;letter-spacing:.2em">0 OF 7 LIT</p></div><div class="rail">' + C.pheras.map((p, k) => `<button class="ph" aria-pressed="false" aria-label="वचन ${p[0]}: ${p[1]}">${d}<i>${p[0]}</i><h3>${p[1]}</h3><p>${p[2]}</p></button>`).join('') + '</div>'; return s
+      s.innerHTML = '<div style="text-align:center;padding:0 7vw 26px"><div class="pheras-divine-header"><svg viewBox="0 0 60 60" fill="none" stroke="#F4C94B" stroke-width="1.8" aria-hidden="true"><path d="M30 6 Q36 18 30 26 Q24 18 30 6 Z" fill="#F4C94B" opacity="0.9"/><path d="M30 12 Q33 20 30 24 Q27 20 30 12 Z" fill="#FFF5DC"/><path d="M12 36 L48 36 L42 50 L18 50 Z" stroke="#D4AF70" fill="rgba(212,175,112,0.18)"/><path d="M8 36 L52 36" stroke="#F4C94B" stroke-width="2.2"/><path d="M14 50 L46 50" stroke="#F4C94B" stroke-width="2.2"/><path d="M15 36 L24 24 L36 24 L45 36" stroke="#D4AF70" stroke-dasharray="2 2"/></svg><div class="shloka-main" style="color:#F4C94B;font-size:clamp(1.1rem,3.2vw,1.45rem)">॥ सप्तपदी · पवित्र अग्नि प्रदक्षिणा ॥</div><div class="shloka-sub" style="color:#FFF8DC;margin-top:2px;font-size:0.92rem">सखा सप्तपदा भव । सख्यं ते गमेयम् ।</div></div><h2 style="font-size:clamp(2.2rem,7vw,3.8rem);color:var(--gold);margin-top:6px">सात वचन · सात दीप</h2><p style="font:italic 1.25rem Cormorant Garamond,serif;margin:6px 0 2px;color:var(--rose)">Promises I Want From Her</p><p style="font:300 .85rem Poppins,sans-serif;letter-spacing:.05em;opacity:.85;margin-bottom:8px">Swipe through the pheras and touch each diya to seal our sacred promises.</p><p class="cin" id="lit" aria-live="polite" style="color:var(--gold);font-size:.78rem;letter-spacing:.2em">0 OF 7 LIT</p></div><div class="rail">' + C.pheras.map((p, k) => `<button class="ph" aria-pressed="false" aria-label="वचन ${p[0]}: ${p[1]}">${d}<i>${p[0]}</i><h3>${p[1]}</h3><p>${p[2]}</p></button>`).join('') + '</div>'; return s
     }
     /* events */
     const host = $('#celebrations');
@@ -2238,7 +2490,11 @@
       let extra = '';
       if (e.type === 'stage') extra = '<div class="spot" style="left:5%"></div><div class="spot" style="left:45%;animation-delay:-3s"></div>' + '';
       const bars = (e.type === 'stage' || e.type === 'dj') ? eqbars(e.type === 'dj' ? 32 : 18) : '';
-      s.innerHTML = `<div class="fxl">${extra}</div><div class="wrap" data-day="${e.d.slice(8)}"><div><p class="date">${fmt(e.d).toUpperCase()}</p><h2>${e.t}</h2>${bars}<p class="copy">${e.c}</p>
+      s.innerHTML = `<div class="fxl">${extra}</div><div class="wrap" data-day="${e.d.slice(8)}">
+        <svg class="corner-flourish tl" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 40 L4 14 C4 8.5 8.5 4 14 4 L40 4 M4 4 L14 14 M8 4 L4 8 M4 24 C10 24 14 20 14 14 C14 8 10 4 4 4 M24 4 C24 10 20 14 14 14"/><circle cx="14" cy="14" r="2.5" fill="currentColor"/></svg>
+        <svg class="corner-flourish tr" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 40 L4 14 C4 8.5 8.5 4 14 4 L40 4 M4 4 L14 14 M8 4 L4 8 M4 24 C10 24 14 20 14 14 C14 8 10 4 4 4 M24 4 C24 10 20 14 14 14"/><circle cx="14" cy="14" r="2.5" fill="currentColor"/></svg>
+        <svg class="corner-flourish bl" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 40 L4 14 C4 8.5 8.5 4 14 4 L40 4 M4 4 L14 14 M8 4 L4 8 M4 24 C10 24 14 20 14 14 C14 8 10 4 4 4 M24 4 C24 10 20 14 14 14"/><circle cx="14" cy="14" r="2.5" fill="currentColor"/></svg>
+        <svg class="corner-flourish br" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 40 L4 14 C4 8.5 8.5 4 14 4 L40 4 M4 4 L14 14 M8 4 L4 8 M4 24 C10 24 14 20 14 14 C14 8 10 4 4 4 M24 4 C24 10 20 14 14 14"/><circle cx="14" cy="14" r="2.5" fill="currentColor"/></svg><div><p class="event-sanskrit-tag">${e.skt}</p><p class="date">${fmt(e.d).toUpperCase()}</p><h2>${e.t}</h2>${bars}<p class="copy">${e.c}</p>
  ${e.type === 'wed' ? '<p class="script" style="font-size:2.2rem;color:var(--acc)">Two Hearts, One Sacred Promise</p>' : ''}
  <div class="meta"><span><b>${e.tl}</b></span><span>${e.v}</span><span style="opacity:.75">${e.m}</span></div>
  <div class="btns"><a class="btn" target="_blank" rel="noopener" href="${maps}">OPEN IN MAPS</a><a class="btn" target="_blank" rel="noopener" href="${cal}">ADD TO CALENDAR</a>${e.type === 'dj' ? '<button class="btn" data-conf>CELEBRATE</button>' : ''}</div></div>${art[e.type]}</div>`;
