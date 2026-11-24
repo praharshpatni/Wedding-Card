@@ -1389,7 +1389,6 @@
       color: #FFF9EF;
       text-shadow: 0 2px 14px rgba(0, 0, 0, 0.95), 0 0 20px rgba(244, 201, 75, 0.6);
       line-height: 1.15;
-    }
       border-radius: 20px;
       border: 1px solid rgba(212, 175, 112, 0.45);
     }
@@ -1963,7 +1962,7 @@
       color: var(--maroon);
       animation: beat 1.1s ease-in-out infinite
     }
-  
+
     /* =======================================================
        ROYAL WEDDING CARD PALETTE & SACRED RELIGIOUS MOTIFS
        ======================================================= */
@@ -1992,7 +1991,7 @@
       position: relative;
       background: linear-gradient(145deg, rgba(255, 253, 249, 0.98), rgba(250, 243, 228, 0.96));
       border: 2px solid var(--card-border-gold);
-      box-shadow: 
+      box-shadow:
         0 0 0 5px rgba(255, 253, 249, 0.9),
         0 0 0 7px var(--card-border-gold),
         0 18px 45px rgba(96, 28, 44, 0.14),
@@ -2012,10 +2011,29 @@
       z-index: 3;
       color: var(--card-gold);
     }
-    .corner-flourish.tl { top: 10px; left: 10px; }
-    .corner-flourish.tr { top: 10px; right: 10px; transform: scaleX(-1); }
-    .corner-flourish.bl { bottom: 10px; left: 10px; transform: scaleY(-1); }
-    .corner-flourish.br { bottom: 10px; right: 10px; transform: scale(-1); }
+
+    .corner-flourish.tl {
+      top: 10px;
+      left: 10px;
+    }
+
+    .corner-flourish.tr {
+      top: 10px;
+      right: 10px;
+      transform: scaleX(-1);
+    }
+
+    .corner-flourish.bl {
+      bottom: 10px;
+      left: 10px;
+      transform: scaleY(-1);
+    }
+
+    .corner-flourish.br {
+      bottom: 10px;
+      right: 10px;
+      transform: scale(-1);
+    }
 
     /* Sacred Invocations & Devanagari Shlokas */
     .divine-invocation {
@@ -2023,17 +2041,20 @@
       margin-bottom: 22px;
       position: relative;
     }
+
     .ganesha-crest {
       display: inline-flex;
       flex-direction: column;
       align-items: center;
       gap: 8px;
     }
+
     .ganesha-crest svg {
       width: 58px;
       height: 58px;
       filter: drop-shadow(0 2px 6px rgba(212, 175, 112, 0.45));
     }
+
     .shloka-main {
       font-family: 'Noto Serif Devanagari', 'Rozha One', serif;
       font-weight: 700;
@@ -2044,6 +2065,7 @@
       margin-top: 4px;
       line-height: 1.35;
     }
+
     .shloka-sub {
       font-family: 'Noto Serif Devanagari', serif;
       font-weight: 600;
@@ -2053,6 +2075,7 @@
       margin-top: 4px;
       line-height: 1.5;
     }
+
     .shloka-vivah {
       font-family: 'Noto Serif Devanagari', serif;
       font-weight: 600;
@@ -2072,11 +2095,13 @@
       max-width: 420px;
       color: var(--card-gold);
     }
+
     .sacred-toran-line {
       flex: 1;
       height: 1px;
       background: linear-gradient(90deg, transparent, var(--card-gold), transparent);
     }
+
     .sacred-toran-symbol {
       font-size: 1.15rem;
       line-height: 1;
@@ -2089,13 +2114,14 @@
       position: relative;
       background: linear-gradient(150deg, rgba(255, 253, 249, 0.96), rgba(252, 246, 235, 0.93));
       border: 1px solid rgba(212, 175, 112, 0.55);
-      box-shadow: 
+      box-shadow:
         0 0 0 4px rgba(255, 255, 255, 0.8),
         0 0 0 5px rgba(212, 175, 112, 0.45),
         0 14px 38px rgba(0, 0, 0, 0.12);
       border-radius: 16px;
       padding: clamp(26px, 4.5vw, 48px);
     }
+
     .event-sanskrit-tag {
       font-family: 'Noto Serif Devanagari', 'Rozha One', serif;
       font-weight: 700;
@@ -2125,12 +2151,15 @@
       z-index: 3;
       border: 2px solid #FFF8DC;
     }
+
     .door.l .door-medallion {
       right: 20px;
     }
+
     .door.r .door-medallion {
       left: 20px;
     }
+
     .gate-divine-title {
       font-family: 'Noto Serif Devanagari', 'Rozha One', serif;
       font-weight: 700;
@@ -2145,6 +2174,7 @@
     .pheras-divine-header {
       margin-bottom: 8px;
     }
+
     .pheras-divine-header svg {
       width: 44px;
       height: 44px;
@@ -2161,6 +2191,383 @@
       font-size: clamp(0.85rem, 2.4vw, 1.05rem);
       line-height: 1.8;
       color: #FFE6BC;
+    }
+  
+    /* =======================================================
+       PERFECT READABILITY & HIGH CONTRAST TYPOGRAPHY SYSTEM
+       ======================================================= */
+
+    /* Universal Sheet Text Readability */
+    .wedding-card-sheet {
+      position: relative;
+      background: linear-gradient(145deg, #FFFDF8, #FAF2E3);
+      border: 2px solid #D4AF70;
+      box-shadow: 
+        0 0 0 5px rgba(255, 253, 249, 0.95),
+        0 0 0 7px rgba(212, 175, 112, 0.65),
+        0 18px 45px rgba(96, 28, 44, 0.16),
+        inset 0 0 35px rgba(212, 175, 112, 0.14);
+      border-radius: 14px;
+      padding: clamp(28px, 5vw, 60px) clamp(18px, 4vw, 48px);
+      margin: auto;
+      color: #2D0C14 !important; /* Deep royal maroon-black for maximum contrast on light cards */
+    }
+
+    /* 1. HERO SECTION (#home) READABILITY */
+    #home .wedding-card-sheet {
+      color: #2D0C14 !important;
+    }
+    #home .names {
+      font-family: 'Playfair Display', 'Cormorant Garamond', 'Cinzel', serif !important;
+      font-weight: 700 !important;
+      font-size: clamp(2.4rem, 8vw, 5.2rem) !important;
+      line-height: 1.15 !important;
+      color: #5A1121 !important;
+      text-shadow: 0 2px 4px rgba(212, 175, 112, 0.35) !important;
+      margin: 8px 0 !important;
+    }
+    #home .names span#gn,
+    #home .names span#bn {
+      color: #5A1121 !important;
+      display: inline-block;
+    }
+    #home .names .amp {
+      font-family: 'Playfair Display', 'Cormorant Garamond', serif !important;
+      font-style: italic !important;
+      font-size: 0.85em !important;
+      color: #B58836 !important;
+      margin: 0 8px !important;
+      display: inline-block !important;
+    }
+    #home .shloka-main {
+      color: #6E1325 !important;
+      font-weight: 700 !important;
+    }
+    #home .shloka-sub {
+      color: #4A121E !important;
+      font-weight: 600 !important;
+      font-size: clamp(0.85rem, 2.3vw, 1.05rem) !important;
+    }
+    #home .shloka-vivah {
+      color: #6E1325 !important;
+      font-weight: 700 !important;
+      font-size: clamp(0.9rem, 2.4vw, 1.15rem) !important;
+    }
+    #home .tag {
+      color: #38121A !important;
+      font-weight: 500 !important;
+      font-size: clamp(1.05rem, 2.6vw, 1.35rem) !important;
+    }
+    #home .count div {
+      background: rgba(255, 255, 255, 0.75) !important;
+      border: 1.5px solid #D4AF70 !important;
+      box-shadow: 0 4px 12px rgba(96, 28, 44, 0.08) !important;
+    }
+    #home .count b {
+      color: #6E1325 !important;
+      font-weight: 700 !important;
+    }
+    #home .count span {
+      color: #7A4E12 !important;
+      font-weight: 600 !important;
+    }
+
+    /* 2. GLANCE BANNER (#glance) READABILITY */
+    #glance .shloka-sub {
+      color: #FFEBB8 !important;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9) !important;
+      font-weight: 600 !important;
+    }
+    #glance .eyes-ornament {
+      color: #F4C94B !important;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9) !important;
+      font-weight: 700 !important;
+    }
+    #glance .eyes-quote {
+      color: #FFFDF8 !important;
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.95), 0 0 20px rgba(0, 0, 0, 0.8) !important;
+      font-size: clamp(1.4rem, 4vw, 2.2rem) !important;
+    }
+    #glance .eyes-sub {
+      color: #F4C94B !important;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9) !important;
+      font-weight: 600 !important;
+      letter-spacing: 0.28em !important;
+    }
+
+    /* 3. MEET THE COUPLE (#story) READABILITY */
+    #story {
+      color: #2D0C14 !important;
+    }
+    #story h2 {
+      color: #5A1121 !important;
+      font-weight: 700 !important;
+      font-size: clamp(2.2rem, 5vw, 3.4rem) !important;
+      margin-bottom: 16px !important;
+    }
+    #story .event-sanskrit-tag {
+      color: #6E1325 !important;
+      font-weight: 700 !important;
+    }
+    #story .shloka-sub {
+      color: #4A121E !important;
+      font-weight: 600 !important;
+    }
+    #story .person {
+      border-left: 3px solid #B58836 !important;
+      padding-left: 20px !important;
+      margin: 22px 0 !important;
+    }
+    #story .person .role {
+      color: #8C5410 !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.22em !important;
+      font-size: 0.78rem !important;
+    }
+    #story .person h3 {
+      color: #5A1121 !important;
+      font-weight: 700 !important;
+      font-size: 1.85rem !important;
+      margin: 4px 0 !important;
+    }
+    #story .person p {
+      color: #2B1117 !important;
+      font-weight: 400 !important;
+      font-size: 0.96rem !important;
+      line-height: 1.65 !important;
+    }
+    #story .person small {
+      color: #6B4212 !important;
+      font-weight: 600 !important;
+      font-size: 0.85rem !important;
+      display: inline-block !important;
+      margin-top: 4px !important;
+    }
+    #story .quote {
+      color: #4A1722 !important;
+      font-weight: 500 !important;
+      font-style: italic !important;
+      line-height: 1.4 !important;
+    }
+
+    /* 4. CELEBRATION CARDS (#celebrations) READABILITY SYSTEM */
+    /* Dynamic styling: Light events get warm ivory card; Dark events get royal dark velvet parchment */
+    .ev .wrap {
+      position: relative;
+      border-radius: 16px;
+      padding: clamp(28px, 4.5vw, 50px);
+      transition: all 0.3s ease;
+    }
+
+    /* LIGHT THEMED EVENT CARDS (Grah Shanti, Haldi, Reception) */
+    .ev[style*="--ink:#4a2c0a"] .wrap,
+    .ev[style*="--ink:#4d3100"] .wrap,
+    .ev[style*="--ink:#1b1b1b"] .wrap {
+      background: linear-gradient(150deg, rgba(255, 253, 249, 0.97), rgba(252, 246, 235, 0.95)) !important;
+      border: 1.5px solid rgba(181, 136, 54, 0.6) !important;
+      box-shadow: 
+        0 0 0 4px rgba(255, 255, 255, 0.9),
+        0 0 0 6px rgba(212, 175, 112, 0.45),
+        0 14px 40px rgba(74, 44, 10, 0.15) !important;
+      color: #2E1A05 !important;
+    }
+    .ev[style*="--ink:#4a2c0a"] .wrap h2,
+    .ev[style*="--ink:#4d3100"] .wrap h2,
+    .ev[style*="--ink:#1b1b1b"] .wrap h2 {
+      color: #4A2605 !important;
+      font-weight: 700 !important;
+    }
+    .ev[style*="--ink:#4a2c0a"] .wrap .copy,
+    .ev[style*="--ink:#4d3100"] .wrap .copy,
+    .ev[style*="--ink:#1b1b1b"] .wrap .copy {
+      color: #2E1A05 !important;
+      font-weight: 500 !important;
+    }
+    .ev[style*="--ink:#4a2c0a"] .wrap .meta,
+    .ev[style*="--ink:#4d3100"] .wrap .meta,
+    .ev[style*="--ink:#1b1b1b"] .wrap .meta {
+      color: #381F08 !important;
+      font-weight: 500 !important;
+    }
+    .ev[style*="--ink:#4a2c0a"] .wrap .meta b,
+    .ev[style*="--ink:#4d3100"] .wrap .meta b,
+    .ev[style*="--ink:#1b1b1b"] .wrap .meta b {
+      color: #8C4800 !important;
+      font-weight: 700 !important;
+    }
+    .ev[style*="--ink:#4a2c0a"] .wrap .date,
+    .ev[style*="--ink:#4d3100"] .wrap .date,
+    .ev[style*="--ink:#1b1b1b"] .wrap .date {
+      color: #8C4800 !important;
+      font-weight: 700 !important;
+    }
+    .ev[style*="--ink:#4a2c0a"] .wrap .event-sanskrit-tag,
+    .ev[style*="--ink:#4d3100"] .wrap .event-sanskrit-tag,
+    .ev[style*="--ink:#1b1b1b"] .wrap .event-sanskrit-tag {
+      color: #6E1325 !important;
+      font-weight: 700 !important;
+    }
+    .ev[style*="--ink:#4a2c0a"] .wrap .btn,
+    .ev[style*="--ink:#4d3100"] .wrap .btn,
+    .ev[style*="--ink:#1b1b1b"] .wrap .btn {
+      color: #5A2E05 !important;
+      border-color: #8C4800 !important;
+      font-weight: 600 !important;
+      background: rgba(255, 255, 255, 0.8) !important;
+    }
+    .ev[style*="--ink:#4a2c0a"] .wrap .btn:hover,
+    .ev[style*="--ink:#4d3100"] .wrap .btn:hover,
+    .ev[style*="--ink:#1b1b1b"] .wrap .btn:hover {
+      background: #8C4800 !important;
+      color: #FFF9EF !important;
+    }
+
+    /* DARK THEMED EVENT CARDS (Mehendi, Sangeet, DJ Night, Shubh Vivah) */
+    .ev[style*="--ink:#FFF9EF"] .wrap,
+    .ev[style*="--ink:#F3ECFF"] .wrap {
+      background: linear-gradient(150deg, rgba(20, 8, 15, 0.88), rgba(10, 4, 8, 0.92)) !important;
+      backdrop-filter: blur(12px) !important;
+      border: 1.5px solid rgba(244, 201, 75, 0.6) !important;
+      box-shadow: 
+        0 0 0 4px rgba(255, 255, 255, 0.08),
+        0 0 0 6px rgba(212, 175, 112, 0.45),
+        0 20px 50px rgba(0, 0, 0, 0.65) !important;
+      color: #FFFDF8 !important;
+    }
+    .ev[style*="--ink:#FFF9EF"] .wrap h2,
+    .ev[style*="--ink:#F3ECFF"] .wrap h2 {
+      color: #FFFDF8 !important;
+      text-shadow: 0 2px 14px rgba(0, 0, 0, 0.9) !important;
+      font-weight: 700 !important;
+    }
+    .ev[style*="--ink:#FFF9EF"] .wrap .copy,
+    .ev[style*="--ink:#F3ECFF"] .wrap .copy {
+      color: #FFF5E4 !important;
+      text-shadow: 0 1px 6px rgba(0, 0, 0, 0.85) !important;
+      font-weight: 400 !important;
+    }
+    .ev[style*="--ink:#FFF9EF"] .wrap .meta,
+    .ev[style*="--ink:#F3ECFF"] .wrap .meta {
+      color: #FBEBD6 !important;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8) !important;
+    }
+    .ev[style*="--ink:#FFF9EF"] .wrap .meta b,
+    .ev[style*="--ink:#F3ECFF"] .wrap .meta b {
+      color: #F4C94B !important;
+      font-weight: 700 !important;
+      text-shadow: 0 0 10px rgba(244, 201, 75, 0.4) !important;
+    }
+    .ev[style*="--ink:#FFF9EF"] .wrap .date,
+    .ev[style*="--ink:#F3ECFF"] .wrap .date {
+      color: #F4C94B !important;
+      font-weight: 700 !important;
+      text-shadow: 0 0 10px rgba(244, 201, 75, 0.5) !important;
+    }
+    .ev[style*="--ink:#FFF9EF"] .wrap .event-sanskrit-tag,
+    .ev[style*="--ink:#F3ECFF"] .wrap .event-sanskrit-tag {
+      color: #F4C94B !important;
+      font-weight: 700 !important;
+      text-shadow: 0 0 12px rgba(244, 201, 75, 0.6) !important;
+    }
+    .ev[style*="--ink:#FFF9EF"] .wrap .corner-flourish,
+    .ev[style*="--ink:#F3ECFF"] .wrap .corner-flourish {
+      color: #F4C94B !important;
+    }
+    .ev[style*="--ink:#FFF9EF"] .wrap .btn,
+    .ev[style*="--ink:#F3ECFF"] .wrap .btn {
+      color: #FFF9EF !important;
+      border-color: #F4C94B !important;
+      background: rgba(244, 201, 75, 0.15) !important;
+      font-weight: 600 !important;
+    }
+    .ev[style*="--ink:#FFF9EF"] .wrap .btn:hover,
+    .ev[style*="--ink:#F3ECFF"] .wrap .btn:hover {
+      background: #F4C94B !important;
+      color: #21152F !important;
+    }
+
+    /* 5. SEVEN VOWS SECTION (#pheras) READABILITY */
+    #pheras {
+      color: #FFF9EF !important;
+    }
+    #pheras h2 {
+      color: #F4C94B !important;
+      text-shadow: 0 2px 14px rgba(0, 0, 0, 0.8) !important;
+      font-weight: 700 !important;
+    }
+    #pheras .ph {
+      background: rgba(18, 5, 12, 0.72) !important;
+      border: 1.5px solid rgba(244, 201, 75, 0.65) !important;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45) !important;
+    }
+    #pheras .ph h3 {
+      color: #F4C94B !important;
+      font-weight: 700 !important;
+      text-shadow: 0 1px 6px rgba(0, 0, 0, 0.8) !important;
+    }
+    #pheras .ph p {
+      color: #FFFDF8 !important;
+      font-weight: 400 !important;
+      line-height: 1.65 !important;
+      opacity: 1 !important;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8) !important;
+    }
+    #pheras .ph i {
+      color: #F4C94B !important;
+      font-weight: 700 !important;
+      text-shadow: 0 0 12px rgba(244, 201, 75, 0.6) !important;
+    }
+
+    /* 6. RSVP SECTION (#rsvp) READABILITY */
+    #rsvp .wedding-card-sheet {
+      color: #2D0C14 !important;
+    }
+    #rsvp h2 {
+      color: #5A1121 !important;
+      font-weight: 700 !important;
+      font-size: clamp(2.2rem, 5vw, 3.4rem) !important;
+      margin-bottom: 24px !important;
+    }
+    #rsvp .v {
+      border-top: 1.5px solid #B58836 !important;
+      color: #2E1218 !important;
+      font-size: 0.95rem !important;
+      line-height: 1.6 !important;
+    }
+    #rsvp .v b {
+      color: #6E1325 !important;
+      font-weight: 700 !important;
+      font-size: 1.08rem !important;
+      margin-bottom: 3px !important;
+    }
+    #rsvp .v a {
+      color: #8C4800 !important;
+      font-weight: 700 !important;
+      text-decoration: underline !important;
+      font-size: 0.86rem !important;
+    }
+
+    /* 7. FOOTER (#end) READABILITY */
+    #end {
+      color: #FFFDF8 !important;
+    }
+    #end h2 {
+      color: #FFFDF8 !important;
+      text-shadow: 0 2px 14px rgba(0, 0, 0, 0.9) !important;
+      font-weight: 700 !important;
+    }
+    #end .script {
+      color: #F4C94B !important;
+      text-shadow: 0 0 20px rgba(244, 201, 75, 0.6) !important;
+    }
+    #end p {
+      color: #FFF5E4 !important;
+      text-shadow: 0 1px 6px rgba(0, 0, 0, 0.8) !important;
+    }
+    #end .footer-shloka-block p {
+      color: #FFF2D1 !important;
+      text-shadow: 0 1px 8px rgba(0, 0, 0, 0.9) !important;
+      font-weight: 600 !important;
     }
 
   </style>
@@ -2206,8 +2613,12 @@
       </div>
     </div>
 
-    <div class="door l" aria-hidden="true"><div class="door-medallion">卐</div></div>
-    <div class="door r" aria-hidden="true"><div class="door-medallion">ॐ</div></div>
+    <div class="door l" aria-hidden="true">
+      <div class="door-medallion">卐</div>
+    </div>
+    <div class="door r" aria-hidden="true">
+      <div class="door-medallion">ॐ</div>
+    </div>
     <div class="gc">
       <div class="gate-divine-title">॥ श्री गणेशाय नमः ॥</div>
       <p class="cin intro-sub" style="font-size:clamp(.72rem,2.2vw,.82rem);letter-spacing:.32em">TOGETHER WITH THEIR
@@ -2269,27 +2680,50 @@
       <div class="fxl" data-fx="gold"></div>
       <div class="wrap wedding-card-sheet">
 
-        <svg class="corner-flourish tl" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 40 L4 14 C4 8.5 8.5 4 14 4 L40 4 M4 4 L14 14 M8 4 L4 8 M4 24 C10 24 14 20 14 14 C14 8 10 4 4 4 M24 4 C24 10 20 14 14 14"/><circle cx="14" cy="14" r="2.5" fill="currentColor"/></svg>
-        <svg class="corner-flourish tr" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 40 L4 14 C4 8.5 8.5 4 14 4 L40 4 M4 4 L14 14 M8 4 L4 8 M4 24 C10 24 14 20 14 14 C14 8 10 4 4 4 M24 4 C24 10 20 14 14 14"/><circle cx="14" cy="14" r="2.5" fill="currentColor"/></svg>
-        <svg class="corner-flourish bl" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 40 L4 14 C4 8.5 8.5 4 14 4 L40 4 M4 4 L14 14 M8 4 L4 8 M4 24 C10 24 14 20 14 14 C14 8 10 4 4 4 M24 4 C24 10 20 14 14 14"/><circle cx="14" cy="14" r="2.5" fill="currentColor"/></svg>
-        <svg class="corner-flourish br" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 40 L4 14 C4 8.5 8.5 4 14 4 L40 4 M4 4 L14 14 M8 4 L4 8 M4 24 C10 24 14 20 14 14 C14 8 10 4 4 4 M24 4 C24 10 20 14 14 14"/><circle cx="14" cy="14" r="2.5" fill="currentColor"/></svg>
+        <svg class="corner-flourish tl" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.4"
+          aria-hidden="true">
+          <path
+            d="M4 40 L4 14 C4 8.5 8.5 4 14 4 L40 4 M4 4 L14 14 M8 4 L4 8 M4 24 C10 24 14 20 14 14 C14 8 10 4 4 4 M24 4 C24 10 20 14 14 14" />
+          <circle cx="14" cy="14" r="2.5" fill="currentColor" />
+        </svg>
+        <svg class="corner-flourish tr" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.4"
+          aria-hidden="true">
+          <path
+            d="M4 40 L4 14 C4 8.5 8.5 4 14 4 L40 4 M4 4 L14 14 M8 4 L4 8 M4 24 C10 24 14 20 14 14 C14 8 10 4 4 4 M24 4 C24 10 20 14 14 14" />
+          <circle cx="14" cy="14" r="2.5" fill="currentColor" />
+        </svg>
+        <svg class="corner-flourish bl" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.4"
+          aria-hidden="true">
+          <path
+            d="M4 40 L4 14 C4 8.5 8.5 4 14 4 L40 4 M4 4 L14 14 M8 4 L4 8 M4 24 C10 24 14 20 14 14 C14 8 10 4 4 4 M24 4 C24 10 20 14 14 14" />
+          <circle cx="14" cy="14" r="2.5" fill="currentColor" />
+        </svg>
+        <svg class="corner-flourish br" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.4"
+          aria-hidden="true">
+          <path
+            d="M4 40 L4 14 C4 8.5 8.5 4 14 4 L40 4 M4 4 L14 14 M8 4 L4 8 M4 24 C10 24 14 20 14 14 C14 8 10 4 4 4 M24 4 C24 10 20 14 14 14" />
+          <circle cx="14" cy="14" r="2.5" fill="currentColor" />
+        </svg>
         <div class="divine-invocation">
           <div class="ganesha-crest">
-            <svg viewBox="0 0 80 80" fill="none" stroke="#B58836" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-  <path d="M40 10 Q40 18 40 26" stroke="#8C2237" stroke-width="3"/>
-  <circle cx="40" cy="12" r="3.5" fill="#8C2237" stroke="none"/>
-  <path d="M30 18 Q40 24 50 18" stroke="#8C2237"/>
-  <path d="M32 20 Q40 28 48 20" stroke="#8C2237"/>
-  <path d="M26 28 C20 30 14 36 14 44 C14 52 22 56 30 54"/>
-  <path d="M54 28 C60 30 66 36 66 44 C66 52 58 56 50 54"/>
-  <path d="M30 28 C30 28 35 24 40 24 C45 24 50 28 50 28 C50 36 48 46 48 54 C48 64 42 68 36 68 C32 68 28 64 30 60 C32 56 38 56 40 58"/>
-  <circle cx="40" cy="36" r="2.2" fill="#8C2237" stroke="none"/>
-  <path d="M48 44 Q52 44 54 41" stroke-width="2"/>
-  <path d="M32 44 Q28 44 26 43" stroke-width="2"/>
-  <ellipse cx="40" cy="72" rx="14" ry="3" stroke="#D4AF70" stroke-width="1.2" fill="none"/>
-</svg>
+            <svg viewBox="0 0 80 80" fill="none" stroke="#B58836" stroke-width="2.2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path d="M40 10 Q40 18 40 26" stroke="#8C2237" stroke-width="3" />
+              <circle cx="40" cy="12" r="3.5" fill="#8C2237" stroke="none" />
+              <path d="M30 18 Q40 24 50 18" stroke="#8C2237" />
+              <path d="M32 20 Q40 28 48 20" stroke="#8C2237" />
+              <path d="M26 28 C20 30 14 36 14 44 C14 52 22 56 30 54" />
+              <path d="M54 28 C60 30 66 36 66 44 C66 52 58 56 50 54" />
+              <path
+                d="M30 28 C30 28 35 24 40 24 C45 24 50 28 50 28 C50 36 48 46 48 54 C48 64 42 68 36 68 C32 68 28 64 30 60 C32 56 38 56 40 58" />
+              <circle cx="40" cy="36" r="2.2" fill="#8C2237" stroke="none" />
+              <path d="M48 44 Q52 44 54 41" stroke-width="2" />
+              <path d="M32 44 Q28 44 26 43" stroke-width="2" />
+              <ellipse cx="40" cy="72" rx="14" ry="3" stroke="#D4AF70" stroke-width="1.2" fill="none" />
+            </svg>
             <div class="shloka-main">॥ श्री गणेशाय नमः ॥</div>
-            <div class="shloka-sub">वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ ।<br>निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा ॥</div>
+            <div class="shloka-sub">वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ ।<br>निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा ॥
+            </div>
             <div class="sacred-toran" aria-hidden="true">
               <span class="sacred-toran-line"></span>
               <span class="sacred-toran-symbol">卐 &nbsp; ॐ &nbsp; 卐</span>
@@ -2303,7 +2737,9 @@
         <p class="tag" id="tagline" style="color:#5c2432;font-weight:400"></p>
         <div class="count" id="count" aria-live="off"></div>
         <p class="tag" style="font-size:1.05rem;color:#4a1226;max-width:34em;margin:16px auto" id="invite"></p>
-        <a class="btn" href="#celebrations" style="--acc:#8C2237;background:#8C2237;color:#FFF9EF;font-weight:600;border-color:#8C2237">VIEW CELEBRATIONS</a>
+        <a class="btn" href="#celebrations"
+          style="--acc:#8C2237;background:#8C2237;color:#FFF9EF;font-weight:600;border-color:#8C2237">VIEW
+          CELEBRATIONS</a>
       </div>
     </section>
 
@@ -2311,7 +2747,8 @@
     <section id="glance" aria-label="When Eyes Met">
       <div class="wrap">
         <div class="eyes-banner">
-          <div class="shloka-sub" style="margin-bottom:8px;font-size:clamp(0.85rem,2.4vw,1.05rem);color:var(--gold)">॥ ॐ श्री वरप्रदाय नमः · ॐ श्री वधूप्रदाय नमः ॥</div>
+          <div class="shloka-sub" style="margin-bottom:8px;font-size:clamp(0.85rem,2.4vw,1.05rem);color:var(--gold)">॥ ॐ
+            श्री वरप्रदाय नमः · ॐ श्री वधूप्रदाय नमः ॥</div>
           <div class="eyes-ornament cin">― ✦ ॥ दृष्टिसंगम · प्रीतिबंधन ॥ ✦ ―</div>
           <div class="eyes-frame">
             <img src="Eyes.jpg" alt="When Eyes Met - Bhargav &amp; Priyu" class="eyes-img" loading="lazy">
@@ -2326,13 +2763,34 @@
     <section id="story">
       <div class="wrap grid wedding-card-sheet">
 
-        <svg class="corner-flourish tl" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 40 L4 14 C4 8.5 8.5 4 14 4 L40 4 M4 4 L14 14 M8 4 L4 8 M4 24 C10 24 14 20 14 14 C14 8 10 4 4 4 M24 4 C24 10 20 14 14 14"/><circle cx="14" cy="14" r="2.5" fill="currentColor"/></svg>
-        <svg class="corner-flourish tr" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 40 L4 14 C4 8.5 8.5 4 14 4 L40 4 M4 4 L14 14 M8 4 L4 8 M4 24 C10 24 14 20 14 14 C14 8 10 4 4 4 M24 4 C24 10 20 14 14 14"/><circle cx="14" cy="14" r="2.5" fill="currentColor"/></svg>
-        <svg class="corner-flourish bl" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 40 L4 14 C4 8.5 8.5 4 14 4 L40 4 M4 4 L14 14 M8 4 L4 8 M4 24 C10 24 14 20 14 14 C14 8 10 4 4 4 M24 4 C24 10 20 14 14 14"/><circle cx="14" cy="14" r="2.5" fill="currentColor"/></svg>
-        <svg class="corner-flourish br" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 40 L4 14 C4 8.5 8.5 4 14 4 L40 4 M4 4 L14 14 M8 4 L4 8 M4 24 C10 24 14 20 14 14 C14 8 10 4 4 4 M24 4 C24 10 20 14 14 14"/><circle cx="14" cy="14" r="2.5" fill="currentColor"/></svg>
+        <svg class="corner-flourish tl" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.4"
+          aria-hidden="true">
+          <path
+            d="M4 40 L4 14 C4 8.5 8.5 4 14 4 L40 4 M4 4 L14 14 M8 4 L4 8 M4 24 C10 24 14 20 14 14 C14 8 10 4 4 4 M24 4 C24 10 20 14 14 14" />
+          <circle cx="14" cy="14" r="2.5" fill="currentColor" />
+        </svg>
+        <svg class="corner-flourish tr" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.4"
+          aria-hidden="true">
+          <path
+            d="M4 40 L4 14 C4 8.5 8.5 4 14 4 L40 4 M4 4 L14 14 M8 4 L4 8 M4 24 C10 24 14 20 14 14 C14 8 10 4 4 4 M24 4 C24 10 20 14 14 14" />
+          <circle cx="14" cy="14" r="2.5" fill="currentColor" />
+        </svg>
+        <svg class="corner-flourish bl" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.4"
+          aria-hidden="true">
+          <path
+            d="M4 40 L4 14 C4 8.5 8.5 4 14 4 L40 4 M4 4 L14 14 M8 4 L4 8 M4 24 C10 24 14 20 14 14 C14 8 10 4 4 4 M24 4 C24 10 20 14 14 14" />
+          <circle cx="14" cy="14" r="2.5" fill="currentColor" />
+        </svg>
+        <svg class="corner-flourish br" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.4"
+          aria-hidden="true">
+          <path
+            d="M4 40 L4 14 C4 8.5 8.5 4 14 4 L40 4 M4 4 L14 14 M8 4 L4 8 M4 24 C10 24 14 20 14 14 C14 8 10 4 4 4 M24 4 C24 10 20 14 14 14" />
+          <circle cx="14" cy="14" r="2.5" fill="currentColor" />
+        </svg>
         <div>
           <div class="event-sanskrit-tag" style="margin-bottom:4px">॥ अखण्ड सौभाग्यवती भव · वर-वधू परिचय ॥</div>
-          <div class="shloka-sub" style="font-size:0.86rem;margin-bottom:14px;color:#8C2237">माङ्गल्यं तन्तुनानेन मम जीवनहेतुना । कण्ठे बध्नामि सुभगे सा जीव शरदः शतम् ॥</div>
+          <div class="shloka-sub" style="font-size:0.86rem;margin-bottom:14px;color:#8C2237">माङ्गल्यं तन्तुनानेन मम
+            जीवनहेतुना । कण्ठे बध्नामि सुभगे सा जीव शरदः शतम् ॥</div>
           <h2>Meet the couple</h2>
           <div class="person">
             <span class="role cin">THE GROOM · EVENT PLANNER</span>
@@ -2364,13 +2822,35 @@
     <section id="rsvp">
       <div class="wrap wedding-card-sheet">
 
-        <svg class="corner-flourish tl" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 40 L4 14 C4 8.5 8.5 4 14 4 L40 4 M4 4 L14 14 M8 4 L4 8 M4 24 C10 24 14 20 14 14 C14 8 10 4 4 4 M24 4 C24 10 20 14 14 14"/><circle cx="14" cy="14" r="2.5" fill="currentColor"/></svg>
-        <svg class="corner-flourish tr" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 40 L4 14 C4 8.5 8.5 4 14 4 L40 4 M4 4 L14 14 M8 4 L4 8 M4 24 C10 24 14 20 14 14 C14 8 10 4 4 4 M24 4 C24 10 20 14 14 14"/><circle cx="14" cy="14" r="2.5" fill="currentColor"/></svg>
-        <svg class="corner-flourish bl" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 40 L4 14 C4 8.5 8.5 4 14 4 L40 4 M4 4 L14 14 M8 4 L4 8 M4 24 C10 24 14 20 14 14 C14 8 10 4 4 4 M24 4 C24 10 20 14 14 14"/><circle cx="14" cy="14" r="2.5" fill="currentColor"/></svg>
-        <svg class="corner-flourish br" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 40 L4 14 C4 8.5 8.5 4 14 4 L40 4 M4 4 L14 14 M8 4 L4 8 M4 24 C10 24 14 20 14 14 C14 8 10 4 4 4 M24 4 C24 10 20 14 14 14"/><circle cx="14" cy="14" r="2.5" fill="currentColor"/></svg>
+        <svg class="corner-flourish tl" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.4"
+          aria-hidden="true">
+          <path
+            d="M4 40 L4 14 C4 8.5 8.5 4 14 4 L40 4 M4 4 L14 14 M8 4 L4 8 M4 24 C10 24 14 20 14 14 C14 8 10 4 4 4 M24 4 C24 10 20 14 14 14" />
+          <circle cx="14" cy="14" r="2.5" fill="currentColor" />
+        </svg>
+        <svg class="corner-flourish tr" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.4"
+          aria-hidden="true">
+          <path
+            d="M4 40 L4 14 C4 8.5 8.5 4 14 4 L40 4 M4 4 L14 14 M8 4 L4 8 M4 24 C10 24 14 20 14 14 C14 8 10 4 4 4 M24 4 C24 10 20 14 14 14" />
+          <circle cx="14" cy="14" r="2.5" fill="currentColor" />
+        </svg>
+        <svg class="corner-flourish bl" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.4"
+          aria-hidden="true">
+          <path
+            d="M4 40 L4 14 C4 8.5 8.5 4 14 4 L40 4 M4 4 L14 14 M8 4 L4 8 M4 24 C10 24 14 20 14 14 C14 8 10 4 4 4 M24 4 C24 10 20 14 14 14" />
+          <circle cx="14" cy="14" r="2.5" fill="currentColor" />
+        </svg>
+        <svg class="corner-flourish br" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.4"
+          aria-hidden="true">
+          <path
+            d="M4 40 L4 14 C4 8.5 8.5 4 14 4 L40 4 M4 4 L14 14 M8 4 L4 8 M4 24 C10 24 14 20 14 14 C14 8 10 4 4 4 M24 4 C24 10 20 14 14 14" />
+          <circle cx="14" cy="14" r="2.5" fill="currentColor" />
+        </svg>
         <div class="divine-invocation" style="margin-bottom:14px">
-          <div class="shloka-main" style="color:#8C2237;font-size:clamp(1.15rem,3.2vw,1.5rem)">॥ अतिथि देवो भव · सादर आमन्त्रणम् ॥</div>
-          <div class="shloka-sub" style="color:#B58836;font-size:0.92rem">आपकी गरिमामयी उपस्थिति हमारे इस पावन प्रसंग को अविस्मरणीय बनाएगी।</div>
+          <div class="shloka-main" style="color:#8C2237;font-size:clamp(1.15rem,3.2vw,1.5rem)">॥ अतिथि देवो भव · सादर
+            आमन्त्रणम् ॥</div>
+          <div class="shloka-sub" style="color:#B58836;font-size:0.92rem">आपकी गरिमामयी उपस्थिति हमारे इस पावन प्रसंग को
+            अविस्मरणीय बनाएगी।</div>
         </div>
         <h2>Venues &amp; RSVP</h2>
         <div class="vgrid" id="venues"></div>
@@ -2399,7 +2879,8 @@
       <p
         style="font:italic 1.15rem 'Cormorant Garamond',serif;color:#FFF9EF;max-width:540px;margin:0 auto 18px;line-height:1.6">
         Celebration Designed &amp; Curated by <b>Bhargav</b> (Event Planner)<br>Bridal Radiance &amp; Glam by
-        <b>Priyu</b> (Makeup Artist)</p>
+        <b>Priyu</b> (Makeup Artist)
+      </p>
       <h2>Thank you for being part of our forever.</h2>
       <p class="script">Bhargav &amp; Priyu</p>
       <div class="footer-shloka-block">
