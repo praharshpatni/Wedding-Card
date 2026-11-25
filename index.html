@@ -1484,14 +1484,31 @@
     .gc {
       position: absolute;
       inset: 0;
-      display: grid;
-      place-content: center;
-      justify-items: center;
-      gap: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       text-align: center;
       z-index: 5;
       color: var(--gold);
-      transition: opacity .7s
+      padding: calc(env(safe-area-inset-top, 0px) + 20px) 24px calc(env(safe-area-inset-bottom, 0px) + 20px);
+      box-sizing: border-box;
+      pointer-events: auto;
+      transition: opacity .7s ease;
+    }
+
+    .gc-content {
+      position: relative;
+      z-index: 5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      max-width: min(92vw, 480px);
+      width: 100%;
+      padding: clamp(22px, 4vh, 36px) clamp(18px, 4vw, 32px);
+      background: radial-gradient(ellipse at 50% 50%, rgba(30, 6, 14, 0.88) 0%, rgba(18, 3, 8, 0.75) 75%, transparent 100%);
+      border-radius: 24px;
     }
 
     #gate.open .gc {
@@ -2131,43 +2148,99 @@
       margin-bottom: 2px;
     }
 
-    /* Preloader Door Religious Medallions */
-    .door-medallion {
+    /* Preloader Door Sacred Religious Ornaments */
+    .door-panel-crest {
       position: absolute;
-      top: 50%;
-      width: 66px;
-      height: 66px;
+      top: 14%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      pointer-events: none;
+      z-index: 3;
+      transition: transform 0.6s ease;
+    }
+
+    .door.l .door-panel-crest {
+      left: 38%;
+      transform: translateX(-50%);
+    }
+
+    .door.r .door-panel-crest {
+      right: 38%;
+      transform: translateX(50%);
+    }
+
+    .door-medallion {
+      width: clamp(52px, 8vw, 68px);
+      height: clamp(52px, 8vw, 68px);
       border-radius: 50%;
-      background: radial-gradient(circle at 35% 30%, #F5D061, #B58836 75%, #754B18);
-      box-shadow: 0 0 20px rgba(244, 201, 75, 0.6), inset 0 2px 4px rgba(255, 255, 255, 0.5);
+      background: radial-gradient(circle at 35% 30%, #FFF2CC, #F5D061 40%, #B58836 78%, #754B18 100%);
+      box-shadow: 
+        0 0 0 2px rgba(255, 248, 220, 0.9),
+        0 0 0 5px rgba(96, 28, 44, 0.8),
+        0 0 0 7px rgba(212, 175, 112, 0.6),
+        0 8px 22px rgba(0, 0, 0, 0.7),
+        0 0 25px rgba(244, 201, 75, 0.45),
+        inset 0 2px 4px rgba(255, 255, 255, 0.7);
       display: grid;
       place-items: center;
       font-family: 'Noto Serif Devanagari', serif;
-      font-size: 2rem;
+      font-size: clamp(1.6rem, 3.8vw, 2.2rem);
       font-weight: 700;
-      color: #601C2C;
-      text-shadow: 0 1px 2px rgba(255, 255, 255, 0.6);
-      transform: translateY(-50%);
-      z-index: 3;
-      border: 2px solid #FFF8DC;
+      color: #4A1226;
+      text-shadow: 0 1px 2px rgba(255, 255, 255, 0.7);
+      border: 1px solid #FFF8DC;
     }
 
-    .door.l .door-medallion {
-      right: 20px;
-    }
-
-    .door.r .door-medallion {
-      left: 20px;
+    .door-crest-sub {
+      font-family: 'Noto Serif Devanagari', serif;
+      font-size: clamp(0.7rem, 1.8vw, 0.82rem);
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      color: #F4C94B;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+      text-transform: uppercase;
     }
 
     .gate-divine-title {
       font-family: 'Noto Serif Devanagari', 'Rozha One', serif;
       font-weight: 700;
-      font-size: clamp(1.15rem, 3.5vw, 1.6rem);
+      font-size: clamp(1.2rem, 3.6vw, 1.7rem);
       color: #F4C94B;
-      text-shadow: 0 0 15px rgba(244, 201, 75, 0.7);
-      margin-bottom: 6px;
-      letter-spacing: 0.06em;
+      text-shadow: 0 0 16px rgba(244, 201, 75, 0.75), 0 2px 6px rgba(0, 0, 0, 0.9);
+      margin-bottom: 8px;
+      letter-spacing: 0.08em;
+    }
+
+    .intro-sub {
+      color: #FFF2D1;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
+      font-weight: 600;
+      margin: 4px 0;
+    }
+
+    .intro-names {
+      margin: 8px 0 16px;
+    }
+
+    #gseal {
+      margin: 12px 0 14px;
+    }
+
+    @media (max-width: 600px) {
+      .door-panel-crest {
+        top: 10%;
+      }
+      .door.l .door-panel-crest {
+        left: 36%;
+      }
+      .door.r .door-panel-crest {
+        right: 36%;
+      }
+      .gc-content {
+        padding: 18px 12px;
+      }
     }
 
     /* Seven Vows Sacred Hawan Kund Heading */
@@ -2614,24 +2687,35 @@
     </div>
 
     <div class="door l" aria-hidden="true">
-      <div class="door-medallion">卐</div>
+      <div class="door-panel-crest">
+        <div class="door-medallion">卐</div>
+        <span class="door-crest-sub">शुभ</span>
+      </div>
     </div>
     <div class="door r" aria-hidden="true">
-      <div class="door-medallion">ॐ</div>
+      <div class="door-panel-crest">
+        <div class="door-medallion">ॐ</div>
+        <span class="door-crest-sub">लाभ</span>
+      </div>
     </div>
     <div class="gc">
-      <div class="gate-divine-title">॥ श्री गणेशाय नमः ॥</div>
-      <p class="cin intro-sub" style="font-size:clamp(.72rem,2.2vw,.82rem);letter-spacing:.32em">TOGETHER WITH THEIR
-        FAMILIES</p>
-      <h1 class="intro-names">Bhargav <span class="intro-amp">&amp;</span> Priyu</h1>
-      <button id="gseal" aria-label="Open the invitation. Press and hold, or press Enter."><svg viewBox="0 0 120 120"
-          aria-hidden="true">
-          <circle class="trk" cx="60" cy="60" r="56" />
-          <circle class="prg" cx="60" cy="60" r="56" />
-        </svg><span class="seal-inner"><span class="seal-sub cin">ROYAL SEAL</span><span class="seal-monogram cin">B
-            &amp; P</span><span class="seal-motif">✦</span></span></button>
-      <p class="cin intro-sub" style="font-size:clamp(.72rem,2.2vw,.82rem);letter-spacing:.26em">PRESS AND HOLD TO OPEN
-      </p>
+      <div class="gc-content">
+        <div class="gate-divine-title">॥ श्री गणेशाय नमः ॥</div>
+        <p class="cin intro-sub" style="font-size:clamp(.72rem,2.2vw,.82rem);letter-spacing:.32em">TOGETHER WITH THEIR FAMILIES</p>
+        <h1 class="intro-names">Bhargav <span class="intro-amp">&amp;</span> Priyu</h1>
+        <button id="gseal" aria-label="Open the invitation. Press and hold, or press Enter.">
+          <svg viewBox="0 0 120 120" aria-hidden="true">
+            <circle class="trk" cx="60" cy="60" r="56" />
+            <circle class="prg" cx="60" cy="60" r="56" />
+          </svg>
+          <span class="seal-inner">
+            <span class="seal-sub cin">ROYAL SEAL</span>
+            <span class="seal-monogram cin">B &amp; P</span>
+            <span class="seal-motif">✦</span>
+          </span>
+        </button>
+        <p class="cin intro-sub" style="font-size:clamp(.72rem,2.2vw,.82rem);letter-spacing:.26em">PRESS AND HOLD TO OPEN</p>
+      </div>
     </div>
     <button id="gskip">Skip intro</button>
   </div>
